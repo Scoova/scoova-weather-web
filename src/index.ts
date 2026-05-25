@@ -6,12 +6,11 @@
  * four typed methods cover the 95% case (current conditions, hourly + daily
  * forecasts, full forecast), with `raw()` for anything else.
  *
- * Two transport surfaces are supported:
- *   - The raw weather subdomain:  `https://weather.scoo-va.info`
- *   - The gateway, key-enforced:   `https://api.scoo-va.info/v1/weather`
+ * All requests go through the central Scoova gateway:
+ *   `https://api.scoo-va.info/api/v1/weather`
  *
- * Pass `apiKey` to use the gateway; omit for unauthenticated requests against
- * the raw subdomain (rate-limited).
+ * Pass `apiKey` for key-enforced access; omit for unauthenticated requests
+ * (rate-limited).
  */
 
 export type WeatherVar =
@@ -105,7 +104,7 @@ export class WeatherError extends Error {
   }
 }
 
-const DEFAULT_BASE = 'https://weather.scoo-va.info';
+const DEFAULT_BASE = 'https://api.scoo-va.info/api/v1/weather';
 
 const DEFAULT_CURRENT: WeatherVar[] = [
   'temperature_2m', 'relative_humidity_2m', 'apparent_temperature',
@@ -122,9 +121,9 @@ const DEFAULT_DAILY: WeatherVar[] = [
 
 export interface WeatherClientOptions {
   /**
-   * Base URL. Defaults to the raw weather subdomain
-   * (`https://weather.scoo-va.info`). Point this at the gateway —
-   * `https://api.scoo-va.info/v1/weather` — when you want key enforcement.
+   * Base URL. Defaults to the central Scoova gateway
+   * (`https://api.scoo-va.info/api/v1/weather`). Override only if you are
+   * pointing at a self-hosted weather endpoint.
    */
   baseUrl?: string;
   /**

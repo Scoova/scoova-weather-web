@@ -1,7 +1,7 @@
 {
   "name": "@scoova/weather",
-  "version": "1.1.0",
-  "description": "Weather SDK for Scoova — open-meteo compatible client for weather.scoo-va.info. Current conditions, hourly + daily forecasts, locale-aware.",
+  "version": "1.1.1",
+  "description": "Weather SDK for Scoova — open-meteo compatible client for the Scoova weather gateway. Current conditions, hourly + daily forecasts, locale-aware.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
