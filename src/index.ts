@@ -1,8 +1,8 @@
 /**
  * @scoova/weather
  *
- * Thin client for Scoova's weather endpoint. Speaks the open-meteo
- * `/v1/forecast` shape, so any existing open-meteo code keeps working. The
+ * Thin client for Scoova's weather endpoint. Speaks the scoova weather
+ * `/v1/forecast` shape, so any existing scoova weather code keeps working. The
  * four typed methods cover the 95% case (current conditions, hourly + daily
  * forecasts, full forecast), with `raw()` for anything else.
  *
@@ -218,7 +218,7 @@ export class WeatherClient {
 }
 
 /**
- * Map an open-meteo WMO weather code to a coarse-grained label / icon hint.
+ * Map an scoova weather WMO weather code to a coarse-grained label / icon hint.
  * Useful for UIs that just want one of "clear / cloudy / rain / snow / fog / storm".
  */
 export type WeatherCondition = 'clear' | 'cloudy' | 'fog' | 'drizzle' | 'rain' | 'snow' | 'thunderstorm' | 'unknown';

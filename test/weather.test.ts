@@ -11,7 +11,7 @@ function mockFetch(payload: unknown, status = 200) {
 }
 
 describe('WeatherClient', () => {
-  it('builds the open-meteo /v1/forecast URL with sane defaults', async () => {
+  it('builds the scoova weather /v1/forecast URL with sane defaults', async () => {
     const fetchImpl = mockFetch({
       latitude: 30, longitude: 31,
       generationtime_ms: 0, utc_offset_seconds: 0, timezone: 'auto', timezone_abbreviation: 'GMT',

@@ -1,7 +1,7 @@
 # @scoova/weather
 
 TypeScript client for `weather.scoo-va.info` — the Scoova weather endpoint
-that speaks the open-meteo `/v1/forecast` shape.
+that speaks the scoova weather `/v1/forecast` shape.
 
 ## Install
 

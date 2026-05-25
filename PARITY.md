@@ -1,6 +1,6 @@
 # @scoova/weather — Cross-platform Parity
 
-Five SDKs, one API surface. All target the open-meteo compatible
+Five SDKs, one API surface. All target the scoova weather compatible
 `/v1/forecast` endpoint at `weather.scoo-va.info` (or via the gateway at
 `api.scoo-va.info/v1/weather`).
 
